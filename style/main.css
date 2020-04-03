@@ -403,15 +403,17 @@ p {
 
 .reviews-slider {
   margin-top: 170px;
-  overflow: hidden;
+
 }
 
 .reviews-slider .slick-list {
   margin: 0 -50px;
 }
 
-.reviews-slider .slick-track {
+.reviews-slider .slick-slide {
   margin: 0 50px;
+  padding-bottom: 70px;
+  outline: none;
 }
 
 .reviews-slider .slick-dots {
@@ -419,13 +421,13 @@ p {
   justify-content: center;
 }
 .reviews-slider .slick-dots li {
-  margin: 52px 8px 0 8px;
+  margin: 0px 8px 0 8px;
 }
 
 .reviews-slider .slick-dots li.slick-active button {
   background-color: #fff;
   border: 2px solid #2575e7;
-} 
+}
 
 .reviews-slider .slick-dots button {
   font-size: 0;
@@ -438,12 +440,10 @@ p {
   outline: none;
 }
 
-.reviews-slider__item {
-  box-shadow: 0px 21px 49px 1px rgba(41, 44, 61, 0.15);
-}
-
 .reviews-box {
   display: flex;
+  box-shadow: 0px 21px 49px 1px rgba(41, 44, 61, 0.15);
+  
 }
 
 .reviews-box__images {
@@ -479,7 +479,7 @@ p {
 }
 
 .reviews-box__author {
-  font-family: 'Lato' sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1rem;
   color: #2f3f54;
@@ -489,4 +489,229 @@ p {
 .reviews-box__author span {
   font-weight: 700;
   color: #438cec;
+}
+
+.btn__menu {
+  width: 40px;
+  display: none;
+}
+
+.btn__menu div {
+  height: 5px;
+  background-color: #000;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 1259px) {
+  .reviews-slider .slick-list {
+    margin: 0px;
+  } 
+  .reviews-slider .slick-slide {
+    margin: 0px;
+  }
+  .reviews-box {
+    box-shadow:none;
+  }
+}
+
+@media (max-width: 1170px) {
+  .price__items {
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.price-item:last-child {
+  margin-top: 25px;
+}
+
+@media (max-width: 1065px) {
+  .top-info {
+    max-width: 425px;
+  }
+}
+
+@media (max-width: 1025px) { 
+  .reviews {
+    padding: 50px 0;
+  }
+  .reviews-box {
+    margin: 0 auto;
+    max-width: 530px;
+    
+  }
+  .reviews-slider {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 935px) {
+  .top-info {
+    max-width: 325px;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu__list {
+    display: none;
+    position: absolute;
+    top: 87px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .menu__list li {
+    margin-left: 0;
+  }
+
+  .menu__list a {
+    display: block;
+    padding: 10px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+  }
+
+  .btn__menu {
+    display: block;
+  }
+}
+
+@media (min-width: 901px) {
+  .menu__list {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 870px) { 
+  .price__description {
+    margin: 50px auto 147px;
+  }
+  .price__items { 
+    max-width: 87%;
+  }
+  .price-item {
+    margin-bottom: 20px;
+  }
+  .price-item:last-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 835px) {
+  .top-images_box img {
+    width: 300px;
+  }
+
+  .top-images__circle {
+    width: 165px;
+    height: 165px;
+    top: -30px;
+    right: -30px;
+  }
+}
+
+@media (max-width: 740px) {
+  .top {
+    padding-top: 60px;
+  }
+
+  .top__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .top-info {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: 555px) { 
+  .title {
+    text-align: left;
+  }
+  .price__items {
+    max-width: 100%;
+  }
+
+  .reviews .title {
+    text-align: center;
+  }
+
+  .reviews-box {
+    display: block;
+  }
+  .reviews-box__images {
+    min-height: 200px;
+    width: 100%;
+  }
+  .reviews-box__content {
+    width: 100%;
+    padding: 15px;
+    min-height: 200px;
+  }
+  .reviews-slider .slick-slide {
+    padding-bottom: 20px;
+  }
+  .reviews-slider__item {
+    padding-right: 2px;
+  }
+}
+
+/* @media (max-width: 410px) { 
+  .price-item__cost {
+    max-width: 210px;
+  }
+} */
+
+@media (max-width: 380px) {
+  .top {
+    padding-top: 100px;
+  }
+  .top-info {
+    text-align: center;
+  }
+  .top-info__list {
+    text-align: initial;
+    margin: 50px 50px;
+  }
+  .top-images_box img {
+    width: 290px;
+  }
+  .title {
+    text-align: center;
+  }
+
+  .price {
+    padding: 75px 0 180px;
+  }
+  .price-item__cost {
+    width: 218px;
+  }
+}
+
+@media (max-width: 370px) {
+  .top {
+    padding-top: 100px;
+  }
+  .top-images_box img {
+    width: 250px;
+  }
+  .top-images__circle {
+    right: -24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .top {
+    padding-top: 35px;
+  }
+  .price-item__cost {
+    width: 175px;
+  }
 }
