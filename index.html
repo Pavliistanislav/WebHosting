@@ -8,10 +8,7 @@
       src="https://kit.fontawesome.com/2e287ee547.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700|Roboto:400,700,900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700|Roboto:400,700,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/slick.css" />
     <link rel="stylesheet" href="style/main.css" />
   </head>
@@ -23,21 +20,19 @@
             <a href="#"><img src="img/logo_JoomHost.png" alt="logo" /> </a>
           </div>
 
+          <div class="btn__menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <nav class="menu">
-            <div class="btn__menu">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <ul class="menu__list">
-              <li><a href="#home">HOME</a></li>
-              <li><a href="#about">ABOUT US </a></li>
-              <li><a href="#bridge">WHMCS-BRIDGE</a></li>
-              <li><a href="#">HOSTING</a></li>
-              <li><a href="#">PAGES</a></li>
-              <li><a href="#">BLOG</a></li>
-              <li><a href="#">CONTACT US</a></li>
-            </ul>
+            <a href="#home" class="menu__list">HOME</a>
+            <a href="#about" class="menu__list">ABOUT US</a>
+            <a href="#bridge" class="menu__list">WHMCS-BRIDGE</a>
+            <a href="#hosting" class="menu__list">HOSTING</a>
+            <a href="#pages" class="menu__list">PAGES</a>
+            <a href="#blog" class="menu__list">BLOG</a>
+            <a href="#contactUS" class="menu__list">CONTACT US</a>
           </nav>
         </div>
       </div>
@@ -292,6 +287,19 @@
       </div>
     </section>
 
+    <div class="partners">
+      <div class="container">
+        <div class="partners__inner">
+          <img src="img/jquery.png" alt="jquery" />
+          <img src="img/teespring.png" alt="teespring" />
+          <img src="img/HP.png" alt="HP" />
+          <img src="img/salesforce.png" alt="salesforce" />
+          <img src="img/mediaMath.png" alt="mediamath" />
+          <img src="img/ericsson.png" alt="ericson" />
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -331,13 +339,13 @@
             <div class="footer__title">
               Quick Contact
             </div>
-            <form action="">
+            <form action="./">
               <input type="text" placeholder="Name" />
               <input type="email" placeholder="Email Address" />
               <input type="text" placeholder="Subject" />
               <textarea
-                name=""
-                id=""
+                name="subject"
+                id="subject"
                 cols="20"
                 rows="20"
                 placeholder="Message"

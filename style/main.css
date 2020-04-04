@@ -60,18 +60,38 @@ p {
   height: 86px;
 }
 
-.menu__list {
+.menu {
   display: flex;
 }
 
-.menu__list li {
+.menu a {
   margin-left: 38px;
 }
 
-.menu__list a {
+.menu a {
   font-family: 'Open Sans', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.menu__list {
+  position: relative;
+}
+
+.menu__list:after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #2f3f54;
+  position: absolute;
+  bottom: -0.5px;
+  left: 0;
+  z-index: 1;
+  transition: width 0.2s linear;
+}
+
+.menu__list:hover:after {
+  width: 100%;
 }
 
 .top {
@@ -150,6 +170,13 @@ p {
   padding: 13px 44px;
   border-radius: 30px;
   margin-bottom: 18px;
+  transition: background  0.2s linear, border 0.3s linear, box-shadow 0.2s linear;
+}
+
+.top-info__btn:hover {
+  background-color: #2f3f54;
+  border: 3px solid #2f3f54;
+  box-shadow: 2px 2px 10px #2f3f54;
 }
 
 .top-images_box {
@@ -316,6 +343,10 @@ p {
   right: 0;
   text-align: center;
   padding: 20px 10px;
+}
+
+.partners {
+  padding: 110px 0 110px;
 }
 
 .footer {
@@ -525,6 +556,15 @@ p {
   .price-item:last-child {
     margin-top: 25px;
   }
+
+  .partners {
+    padding: 70px 0 70px;
+  }
+
+  .partners__inner {
+    max-width: 565px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1065px) {
@@ -553,7 +593,7 @@ p {
 }
 
 @media (max-width: 900px) {
-  .menu__list {
+  .menu {
     display: none;
     position: absolute;
     top: 87px;
@@ -562,17 +602,26 @@ p {
     width: 100%;
     text-align: center;
     z-index: 5;
+    margin-top: -1px;
+    border-top: 1px solid #000;
   }
 
-  .menu__list li {
+  .menu a {
     margin-left: 0;
   }
 
-  .menu__list a {
+  .menu a {
     display: block;
     padding: 10px 0;
     background-color: #fff;
     border-bottom: 1px solid #000;
+  }
+  .menu__list:hover:after {
+    width: 0;
+  }
+
+  .menu__list:hover {
+    background-color: #c6d9f4;
   }
 
   .btn__menu {
@@ -588,7 +637,7 @@ p {
 }
 
 @media (min-width: 901px) {
-  .menu__list {
+  .menu {
     display: flex !important;
   }
 }
@@ -660,6 +709,11 @@ p {
   .footer-form {
     margin-top: 20px;
   }
+
+  .partners__inner {
+    max-width: 440px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 555px) {
@@ -691,6 +745,18 @@ p {
   }
   .reviews-slider__item {
     padding-right: 2px;
+  }
+}
+
+@media (max-width: 460px) {
+  .partners__inner img:nth-child(2),
+  .partners__inner img:nth-child(3),
+  .partners__inner img:nth-child(5) {
+    display: block;
+    margin: 0;
+  }
+  .partners__inner {
+    max-width: 220px;
   }
 }
 
